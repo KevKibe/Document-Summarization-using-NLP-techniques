@@ -40,7 +40,7 @@ content_list = st.text_area("Enter the large text:", height=200)
 if st.button("Generate Summary"):
   if content_list:
             # Call the summarize function to generate the summary
-      summary = summarize(content_list)
+      summary = generate_summaries(content_list)
 
             # Display the summary
       st.subheader("Summary:")
