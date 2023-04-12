@@ -18,20 +18,21 @@ def summarize(content):
 
     return summary
     # Set the app title
-    st.title("Large text Summarizer")
+st.title("Large text Summarizer")
 
     # Create a text input for entering the news article content
-    content = st.text_area("Enter the large text:", height=200)
+content = st.text_area("Enter the large text:", height=200)
 
     # Create a button for generating the summary
-    if st.button("Generate Summary"):
-        if content:
+if st.button("Generate Summary"):
+  if content:
             # Call the summarize function to generate the summary
-            summary = summarize(content)
+     summary = summarize(content)
 
             # Display the summary
-            st.subheader("Summary:")
-            st.write(summary)
-            st.success("Summary generated successfully!")
-        else:
-            st.warning("Please enter some content for summarization.")
+     st.subheader("Summary:")
+     st.write(summary)
+     st.success("Summary generated successfully!")
+ else:
+     st.warning("Please enter some content for summarization.")
+    
