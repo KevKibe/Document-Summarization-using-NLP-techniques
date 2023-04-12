@@ -2,4 +2,5 @@ pip
 pandas
 transformers
 sacremoses
-
+AutoTokenizer
+AutoModelForSeq2SeqLM
