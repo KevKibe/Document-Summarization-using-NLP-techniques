@@ -27,12 +27,12 @@ content = st.text_area("Enter the large text:", height=200)
 if st.button("Generate Summary"):
   if content:
             # Call the summarize function to generate the summary
-     summary = summarize(content)
+      summary = summarize(content)
 
             # Display the summary
-     st.subheader("Summary:")
-     st.write(summary)
-     st.success("Summary generated successfully!")
- else:
-     st.warning("Please enter some content for summarization.")
+      st.subheader("Summary:")
+      st.write(summary)
+      st.success("Summary generated successfully!")
+  else:
+      st.warning("Please enter some content for summarization.")
     
