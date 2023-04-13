@@ -1,6 +1,8 @@
 import streamlit as st
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
+tokenizer = AutoTokenizer.from_pretrained("t5-base")
+model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
 
 def generate_summaries(content_list):
     """
@@ -14,8 +16,7 @@ def generate_summaries(content_list):
     """
     print('Length of content list:', len(content_list))
     # Initialize the tokenizer and model
-    tokenizer = AutoTokenizer.from_pretrained("t5-base")
-    model = AutoModelForSeq2SeqLM.from_pretrained("t5-base")
+    
 
     summaries = []
     for content in content_list:
