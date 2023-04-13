@@ -2,4 +2,4 @@ pip
 pandas
 torch
 transformers
-sacremoses
+streamlit
