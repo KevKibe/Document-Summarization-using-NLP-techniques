@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 import torch
-import tranformers
+
 from transformers import BartTokenizer, BartForConditionalGeneration
 
 tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
