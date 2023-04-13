@@ -1,5 +1,6 @@
 pip
 pandas
+torch
 transformers
 sacremoses
 AutoTokenizer
