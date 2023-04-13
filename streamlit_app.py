@@ -4,13 +4,13 @@ import torch
 
 from transformers import BartTokenizer, BartForConditionalGeneration
 
-tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
-model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
+
 
 def generate_summaries(content_list):
 
     print('Length of content list:', len(content_list))
-    
+    tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
+    model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
 
     summaries = []
     for content in content_list:
