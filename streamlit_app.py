@@ -1,24 +1,16 @@
 import streamlit as st
 import pandas as pd
 import torch
-
+import tranformers
 from transformers import BartTokenizer, BartForConditionalGeneration
 
 tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
 model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
 
 def generate_summaries(content_list):
-    """
-    Generates summaries for a list of news articles.
 
-    Args:
-    - content_list (List[str]): A list of news article content.
-
-    Returns:
-    - List[str]: A list of summaries generated for each news article.
-    """
     print('Length of content list:', len(content_list))
-    # Initialize the tokenizer and model
+    
 
     summaries = []
     for content in content_list:
