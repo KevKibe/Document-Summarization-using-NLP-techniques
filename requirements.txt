@@ -3,5 +3,3 @@ pandas
 torch
 transformers
 sacremoses
-AutoTokenizer
-AutoModelForSeq2SeqLM
