@@ -10,12 +10,9 @@ def load_model():
     tokenizer = BartTokenizer.from_pretrained("facebook/bart-large-cnn")
     model = BartForConditionalGeneration.from_pretrained("facebook/bart-large-cnn")
     return tokenizer,model
-
+tokenizer, model = load_model()
 def generate_summaries(content_list):
-
-    print('Length of content list:', len(content_list))
-    
-
+    print('Length of content list:', len(content_list))    
     summaries = []
     for content in content_list:
         inputs = tokenizer(content, padding=True, truncation=True, max_length=512, return_tensors='pt')
