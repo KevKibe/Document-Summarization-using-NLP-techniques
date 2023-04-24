@@ -45,11 +45,8 @@ text = st.text_area("Enter the large text:", height=200)
 
 # Create a button for generating the summary
 if st.button("Generate Summary"):
-   
-            summary = t5_summary(text)
-        # Display the summary
-        st.subheader("Summary:")
-        
-        st.success(summary)
-    else:
-        st.warning("Please enter some content for summarization.")
+    summary = t5_summary(text)
+   st.subheader("Summary:")
+   st.success(summary)
+else:
+   st.warning("Please enter some content for summarization.")
