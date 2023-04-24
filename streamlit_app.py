@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import torch
 
-from src.bart import t5_summary
+from src.T5 import t5_summary
 
 
 if __name__ == "__main__":
