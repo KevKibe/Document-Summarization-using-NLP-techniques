@@ -17,7 +17,7 @@ def t5_summary(INCONTEXT: str) -> str:
                        return_tensors="pt",
                        max_length=512,
                        truncation=True,
-                       padding="max_length")
+                       padding=True)
     outputs = model.generate(
         inputs["input_ids"],
         num_beams=4,
