@@ -1,20 +1,21 @@
-
+# import transformers
 import transformers
-from transformers import BartTokenizer, BartForConditionalGeneration
+from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
-def bart_summary(INCONTEXT: str) -> str:
+
+def t5_summary(INCONTEXT: str) -> str:
     """
-    Summary of BART model.
+    Summary of T5 model.
     
     """
-    # Load BART model
-    model = BartForConditionalGeneration.from_pretrained('facebook/bart-base')
-    tokenizer = BartTokenizer.from_pretrained('facebook/bart-base')
+    # Load T5 model
+    model = AutoModelForSeq2SeqLM.from_pretrained('t5-base')
+    tokenizer = AutoTokenizer.from_pretrained('t5-base')
 
     ARTICLE = INCONTEXT
-    inputs = tokenizer("summarize: " + ARTICLE,
+    inputs = tokenizer("summarize" + ARTICLE,
                        return_tensors="pt",
-                       max_length=1024,
+                       max_length=512,
                        truncation=True,
                        padding="max_length")
     outputs = model.generate(
