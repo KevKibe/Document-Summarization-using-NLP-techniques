@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import torch
 
-from bart import t5_summary
+from src.bart import t5_summary
 
 
 PAGE_STYLE = """
